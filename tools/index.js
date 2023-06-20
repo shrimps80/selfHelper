@@ -8,7 +8,9 @@ new Vue({
     },
     methods: {
         open(name) {
-            alert(name)
+            chrome.tabs.create({
+                url: name + "/index.html"
+            });
         }
     }
 });
