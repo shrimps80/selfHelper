@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e6913bd-f3fb-44b3-a375-be833affd8a6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tools/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/json-format/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/json-format/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/json-format/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/evalCore.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/vue/vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/tools/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/tools/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

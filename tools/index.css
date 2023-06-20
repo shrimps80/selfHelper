@@ -1,0 +1,26 @@
+ul {
+    padding: 0 10px;
+    list-style: none;
+    width: 130px;
+}
+
+ul li {
+    padding: 3px 5px 3px 5px;
+    cursor: pointer;
+    color: #555;
+    -webkit-transition: all .4s ease;
+    text-align: justify;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    width: 120px;
+    border-bottom: 1px dashed #e5e5e5;
+    overflow: hidden;
+}
+
+.footer {
+    font-size: 12px;
+    padding: 5px 15px;
+    line-height: 20px;
+    color: #888;
+}
