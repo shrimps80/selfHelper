@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="zh-CN">
 <head>
-  <title>小助手</title>
+  <title>时间转换工具 - 小助手</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="index.css"/>
   <script type="text/javascript" src="../vendor/evalCore.min.js"></script>
@@ -9,12 +9,12 @@
 </head>
 <body>
 <div id="pageContainer">
-  <div>小助手</div>
-  <ul>
-    <li @click="open('json-format')">json美化工具</li>
-    <li @click="open('timestamp')">时间转换工具</li>
-  </ul>
-  <div class="footer">version: {{manifest.version}}</div>
+  <div class="row">
+    <span>现在的当地时间为：</span> {{txtNowDate}}
+  </div>
+  <div class="row">
+    <span>现在的Unix时间戳：</span> {{txtNowS}}
+  </div>
 </div>
 <script src="index.js"></script>
 </body>
