@@ -15,6 +15,24 @@
   <div class="row">
     <span>现在的Unix时间戳：</span> {{txtNowS}}
   </div>
+
+  <div class="row">
+    <h4>&gt;&gt; Unix时间戳 转 当地时间</h4>
+    <div>
+      <input v-model="txtSrcStamp" type="text" placeholder="时间戳" tabindex="1">
+      <input type="button" value="转换" tabindex="-1" @click="stampToLocale()">
+      <input v-model="txtDesDate" type="text" readonly>
+    </div>
+  </div>
+
+  <div class="row">
+    <h4>&gt;&gt; 当地时间 转 Unix时间戳</h4>
+    <div>
+      <input v-model="txtLocale" type="text" placeholder="时间" tabindex="1">
+      <input type="button" value="转换" tabindex="-1" @click="localeToStamp()">
+      <input v-model="txtDesStamp" type="text" readonly>
+    </div>
+  </div>
 </div>
 <script src="index.js"></script>
 </body>
