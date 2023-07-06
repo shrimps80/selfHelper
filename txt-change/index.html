@@ -9,7 +9,29 @@
 </head>
 <body>
 <div id="pageContainer">
-  文本工具 字母大小  驼峰啊 下划线。。。
+  <div>
+    <button @click="toCamelCase">下划线 转 驼峰</button>
+    <button @click="toUpperCase">首字母大写</button>
+    <button @click="toSnakeCase">驼峰 转 下划线</button>
+    <button @click="toUrlEncode">UrlEncode编码</button>
+    <button @click="toUrlDecode">UrlDecode解码</button>
+    <button @click="toUnserialize">php unserialize</button>
+  </div>
+  <div>
+    <!-- 左边 -->
+    <div>
+      <textarea placeholder="在这里粘贴您需要进行转换的内容" v-model="rawText"></textarea>
+
+      <br/>
+
+      <span v-if="errorMsg">{{ errorMsg }}</span>
+    </div>
+
+    <!-- 右边 -->
+    <div>
+      <pre v-html="placeHolder"></pre>
+    </div>
+  </div>
 </div>
 <script src="index.js"></script>
 </body>
