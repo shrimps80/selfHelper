@@ -16,6 +16,10 @@
     <!-- 左边 -->
     <div>
       <textarea placeholder="在这里粘贴您需要进行格式化的JSON代码" v-model="rawJson"></textarea>
+
+      <br/>
+
+      <span v-if="errorMsg">{{ errorMsg }}</span>
     </div>
 
     <!-- 右边 -->

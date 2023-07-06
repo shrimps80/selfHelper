@@ -3,10 +3,15 @@ new Vue({
     data   : {
         rawJson    : '',
         placeHolder: '',
+        errorMsg: ''
     },
     methods: {
         format: function () {
-            this.placeHolder = this.formatJson(this.rawJson)
+            try {
+                this.placeHolder = this.formatJson(this.rawJson)
+            } catch (e) {
+                this.errorMsg = e.message;
+            }
         },
         formatJson(json) {
             // 去转义/
