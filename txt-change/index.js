@@ -59,5 +59,18 @@ new Vue({
                 this.errorMsg = e.message;
             }
         },
+        toMysqlString   : function () {
+            try {
+                var result = this.rawText.split('\n');
+                for (var i = 0 ; i < result.length ; i++) {
+                    var line  = result[i];
+                    line      = line.trim();   // 去除首尾空格
+                    result[i] = "'" + line + "',"
+                }
+                this.placeHolder = result.join('\n');
+            } catch (e) {
+                this.errorMsg = e.message;
+            }
+        }
     }
 })
