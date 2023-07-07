@@ -71,6 +71,17 @@ new Vue({
             } catch (e) {
                 this.errorMsg = e.message;
             }
+        },
+        copyText        : function () {
+            const textarea = document.createElement('textarea');
+            textarea.value = this.placeHolder;
+            document.body.appendChild(textarea);
+            textarea.select();
+
+            const successful = document.execCommand('copy');
+            const msg        = successful ? '成功' : '未成功';
+            console.log('复制 ' + msg);
+            document.body.removeChild(textarea);
         }
     }
 })
