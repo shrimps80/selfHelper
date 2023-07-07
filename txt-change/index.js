@@ -6,7 +6,7 @@ new Vue({
         errorMsg   : ''
     },
     methods: {
-        toCamelCase  : function () {
+        toCamelCase     : function () {
             try {
                 this.placeHolder = this.rawText.replace(/_(\w)/g, function (match, p1) {
                     return p1.toUpperCase();
@@ -15,7 +15,7 @@ new Vue({
                 this.errorMsg = e.message;
             }
         },
-        toUpperCase  : function () {
+        toUpperCase     : function () {
             try {
                 this.placeHolder = this.titleCase(this.rawText);
             } catch (e) {
@@ -31,34 +31,33 @@ new Vue({
             }
             return result.join('\n');
         },
-        toSnakeCase  : function () {
+        toSnakeCase     : function () {
             try {
                 this.placeHolder = this.rawText.replace(/([a-z\d])([A-Z])/g, '$1_$2').toLowerCase();
             } catch (e) {
                 this.errorMsg = e.message;
             }
         },
-        toUrlEncode  : function () {
+        toUrlEncode     : function () {
             try {
                 this.placeHolder = encodeURIComponent(this.rawText);
             } catch (e) {
                 this.errorMsg = e.message;
             }
         },
-        toUrlDecode  : function () {
+        toUrlDecode     : function () {
             try {
                 this.placeHolder = decodeURIComponent(this.rawText);
             } catch (e) {
                 this.errorMsg = e.message;
             }
         },
-        toUnserialize: function () {
+        toPhpUnserialize: function () {
             try {
-                this.placeHolder = this.rawText
+                this.placeHolder = PHPUnserialize.unserialize(this.rawText)
             } catch (e) {
                 this.errorMsg = e.message;
             }
         },
-
     }
 })
