@@ -72,6 +72,15 @@ new Vue({
                 this.errorMsg = e.message;
             }
         },
+        toPostman       : function () {
+            var result = [];
+            var params = this.rawText.split('&');
+            for (var i = 0 ; i < params.length ; i++) {
+                var line  = decodeURIComponent(params[i]);
+                result[i] = line.replace(/=(.+)/, ':$1')
+            }
+            this.placeHolder = result.join('\n');
+        },
         copyText        : function () {
             const textarea = document.createElement('textarea');
             textarea.value = this.placeHolder;
